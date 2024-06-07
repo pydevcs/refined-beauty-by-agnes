@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Hair Stylist Contact Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+        }
+        .form-container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .form-group input:focus {
+            border-color: #333;
+            outline: none;
+        }
+        .submit-btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .submit-btn:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Wedding Hair Stylist Contact Form</h2>
+        <form id="weddingContactForm" method="post" action="https://refinedbeautybyagnes.com/">
+            <div class="form-group">
+                <label for="event_date">Event Date</label>
+                <input type="text" id="event_date" name="event_date" placeholder="Event Date" required>
+            </div>
+            <div class="form-group">
+                <label for="bride_name">Bride's Name</label>
+                <input type="text" id="bride_name" name="bride_name" placeholder="Bride's Name" required>
+            </div>
+            <div class="form-group">
+                <label for="bride_phone">Bride's Phone Number</label>
+                <input type="text" id="bride_phone" name="bride_phone" placeholder="Bride's Phone Number" pattern="[0-9\s\-]*" title="Only numbers allowed." required>
+            </div>
+            <div class="form-group">
+                <label for="bride_email">Bride's E-mail Address</label>
+                <input type="email" id="bride_email" name="bride_email" placeholder="Bride's E-mail Address" required>
+            </div>
+            <div class="form-group">
+                <label for="getting_ready_location">Getting Ready Location</label>
+                <input type="text" id="getting_ready_location" name="getting_ready_location" placeholder="Getting Ready Location" required>
+            </div>
+            <div class="form-group">
+                <label for="address">Address</label>
+                <input type="text" id="address" name="address" placeholder="Address" required>
+            </div>
+            <div class="form-group">
+                <label for="time_services_completed">Time Services Need To Be Completed</label>
+                <input type="text" id="time_services_completed" name="time_services_completed" placeholder="Time Services Need To Be Completed" required>
+            </div>
+            <div class="form-group">
+                <label for="ceremony_time">Ceremony Time</label>
+                <input type="text" id="ceremony_time" name="ceremony_time" placeholder="Ceremony Time" required>
+            </div>
+            <div class="form-group">
+                <label for="services">Services</label>
+                <input type="text" id="services" name="services" placeholder="Services" required>
+            </div>
+            <input type="hidden" value="et_contact_proccess" name="et_pb_contactform_submit_1">
+            <div class="form-group">
+                <button type="submit" class="submit-btn">Submit</button>
+            </div>
+            <input type="hidden" id="_wpnonce-et-pb-contact-form-submitted-1" name="_wpnonce-et-pb-contact-form-submitted-1" value="28de7ee116">
+            <input type="hidden" name="_wp_http_referer" value="/">
+        </form>
+    </div>
+
+    <script>
+        // Handle form submission to Google Sheets
+        const form = document.getElementById('weddingContactForm');
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const formData = new FormData(form);
+
+            const response = await fetch('https://script.google.com/macros/s/AKfycbw-CDzyZf7aLWG9L0Sh59s1GW2gjQDzi1UdqAt6tyWcxPOej812N1ah5RxZvIKLmKFA/exec', {
+                method: 'POST',
+                body: formData
+            });
+
+            if (response.ok) {
+                alert('Thank you for your submission!');
+                form.reset();
+            } else {
+                alert('There was a problem with your submission.');
+            }
+        });
+    </script>
+</body>
+</html>
