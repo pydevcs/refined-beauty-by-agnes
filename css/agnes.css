@@ -1,10 +1,9 @@
 :root {
   --text-color: #2e2e2e; /* charcoal */
-  --cream: #FDFDFD;
-  --beige: #F2EBDF;
-  --brown: #C9BEBD;
-  --pink: #F4E5F5;
-  --pale-brown: #EEE5E5;
+  --cream: #f3ecdc;
+  --brown: #ccbebb;
+  --pink: #e0c3bf;
+  --pale-brown: #f1e5e3;
 }
 
 /* Reset some basic elements */
@@ -24,24 +23,12 @@ body.no-scroll {
 
 /* Navbar styling */
 .navbar {
-  background-color: transparent;
-  /*padding: 15px 0;*/
-  position: fixed;
-  top: 0;
+  background-color: var(--pink);
   width: 100%;
   height: 100px;
   z-index: 1000;
   display: flex;
   justify-content: center;
-  transition: background-color 0.3s ease, border-bottom 0.3s ease, box-shadow 0.3s ease;
-}
-
-.navbar.scrolled {
-  /*
-  background-color: var(--cream);
-  border-bottom: 1px solid #ddd;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  */
 }
 
 .nav-container {
@@ -83,16 +70,11 @@ body.no-scroll {
   width: auto;
   height: 80px;
   margin: 15px 0;
+  /*
   filter: brightness(0%) drop-shadow(0 0 0 #000) invert(1);
   transition: filter 0.5s ease;
-}
-.navbar.scrolled .logo-link img {
   filter: brightness(100%) drop-shadow(2px 2px 8px rgba(46, 46, 46, 0.5));
-}
-
-.navbar.scrolled .logo-link,
-.navbar.scrolled .logo-link div:nth-child(2) {
-  color: var(--text-color);
+  */
 }
 
 .nav-links {
@@ -108,11 +90,10 @@ body.no-scroll {
 }
 
 .nav-link {
-  color: var(--cream);
+  color: var(--text-color);
   text-decoration: none;
   margin-left: 15px;
   position: relative;
-  transition: color 0.3s ease, background-color 0.3s ease;
   font-size: 20px;
   font-family: "Poppins", sans-serif;
   font-weight: 400;
@@ -120,13 +101,7 @@ body.no-scroll {
   font-variant: all-small-caps;
   letter-spacing: 1.5px;
   padding: 5px 10px;
-  text-shadow: 2px 2px 8px rgba(46, 46, 46, 0.5);
   border-radius: 5px;
-}
-
-.navbar.scrolled .nav-link {
-  color: var(--text-color); 
-  text-shadow: none;
 }
 
 .hamburger {
@@ -135,14 +110,6 @@ body.no-scroll {
 }
 
 .hamburger .bar {
-  background-color: var(--cream);
-  transition: background-color 0.3s ease;
-}
-
-.navbar.scrolled .hamburger .bar{
-  background-color: var(--text-color);
-}
-.navbar .hamburger.open .bar {
   background-color: var(--text-color);
 }
 
@@ -158,7 +125,7 @@ body.no-scroll {
 
   font-family: "Poppins", sans-serif;
   font-style: normal;
-  background-color: var(--pink);
+  background-color: #fdfdfc;
   border-radius: 7px;
 
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -167,23 +134,19 @@ body.no-scroll {
 }
 
 .cta-button:hover {
-  background-color: var(--pale-brown);
-}
-
-.cta-button.scrolled {
-  color: var(--text-color);
+  background-color: var(--pink);
 }
 
 .hero {
   background-color: #000;
-  background-image: url('../imgs/erin_johnny.jpg');
+  background-image: url('../imgs/_Y9A7391_websize.jpg');
   background-size: cover;
   background-position: center;
   height: calc(100vh - 68.5px); /* Full height of the viewport */
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  color: var(--cream);
+  color: #fdfdfc;
   text-align: center;
 
   position: relative;
@@ -230,7 +193,7 @@ body.no-scroll {
   font-style: normal;
   font-size: 14vw;
   line-height: 13.25vw;
-  text-shadow: 2px 2px 8px rgba(46, 46, 46, 0.5); /* Text shadow for better readability */
+  text-shadow: 4px 4px 8px rgba(46, 46, 46, 0.5); /* Text shadow for better readability */
   white-space: nowrap; /* Prevents the text from wrapping */
   padding: 0 20px; /* Padding to ensure text doesn't touch the edges */
   margin: 0 0 20px;
@@ -327,6 +290,18 @@ section.pink > div > img {
 section.contact-us {
   justify-content: center;
 }
+section.contact-us h2 {
+  text-align: center;
+}
+section.contact-us > div > h2 > a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+section.contact-us > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 section.contact-us > div > a {
   font-size: 1.5em;
   line-height: 1.6;
@@ -342,7 +317,7 @@ section.contact-us > div > a {
   width: 100%;
 }
 section.contact-us > div > a:hover {
-  color: var(--brown);
+  color: var(--pink);
 }
 
 section.contact-us > div > div {
@@ -382,6 +357,55 @@ section.info p > b {
 section.testimonials {
   justify-content: center;
 }
+
+section.testimonials > div > div {
+  position: relative;
+  margin: 20px;
+}
+section.testimonials > div > div:nth-child(1) {
+  margin-bottom: 85vh;
+}
+section.testimonials > div > div:nth-child(1) > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 50%;
+}
+section.testimonials > div > div:nth-child(2) {
+  padding-bottom: 25vh;
+  margin-bottom: 50vh;
+}
+
+section.testimonials > div > div:nth-child(2) > img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  max-width: 50%;
+}
+
+section.testimonials > div > div:nth-child(1) blockquote {
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  padding: 20px;
+  width: 60%;
+  left: 40%;
+  border-radius: 7px;
+  background-color: rgba(253, 253, 252, 0.75);
+}
+section.testimonials > div > div:nth-child(2) blockquote {
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  padding: 20px;
+  width: 60%;
+  right: 40%;
+  border-radius: 7px;
+  background-color: rgba(253, 253, 252, 0.75);
+}
+
 section.testimonials cite {
   font-family: 'Playfair Display', serif;
   font-weight: 400;
@@ -394,7 +418,7 @@ section.testimonials cite {
   color: #fff;
   color: var(--text-color);
   
-  background: linear-gradient(to bottom, var(--cream), var(--beige));
+  background: linear-gradient(to bottom, var(--cream), var(--pale-brown));
 
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
   padding: 20px;
@@ -454,6 +478,12 @@ section.slider > div {
   }
 }
 
+
+
+
+#map {
+  height: 50vh;
+}
 
 
 
@@ -521,7 +551,7 @@ a.ig-item img {
 
 
 footer {
-  background-color: var(--beige);
+  background-color: var(--pale-brown);
   padding: 20px;
 }
 
@@ -541,18 +571,69 @@ footer a:hover {
   color: var(--brown);
 }
 
+
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.gallery-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 20px;
+}
+
+.gallery-item img {
+  max-width: 50%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.caption {
+  padding: 20px;
+  font-size: 1.2em;
+  color: var(--text-color);
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.reverse {
+  flex-direction: row-reverse;
+}
+
+@media (max-width: 768px) {
+  .gallery-item {
+      flex-direction: column;
+  }
+  .gallery-item img {
+    max-width: 100%;
+  }
+  .reverse {
+      flex-direction: column;
+  }
+  .caption {
+      padding: 10px 0;
+      text-align: center;
+  }
+}
+
+
 @media (max-width: 60rem) {
   .nav-links {
     position: fixed;
     top: 0;
     right: 0;
     height: 100vh;
-    background-color: var(--beige);
+    background-color: var(--pale-brown);
     width: 100vw;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
     padding: 0 48px;
     opacity: 0;
@@ -569,13 +650,16 @@ footer a:hover {
   .nav-links.open {
     opacity: 1;
     visibility: visible;
+    position: absolute;
+    top: 0;
+    top: 0;
+    height: 100%;
+    z-index: 9;
   }
   .nav-link {
     margin: 20px 0;
     font-size: 24px;
     width: 100%;
-    text-shadow: none;
-    color: var(--text-color);
     text-align: center;
   }
   .hamburger {
@@ -641,7 +725,6 @@ footer a:hover {
   .nav-link.activated {
     background-color: var(--pale-brown);
     color: var(--text-color);
-    text-shadow: none;
   }
 }
 

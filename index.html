@@ -24,10 +24,10 @@
   background-color: rgba(0, 0, 0, 0.4);
 }
 .modal-content {
-  background-color: var(--beige);
+  background-color: var(--pale-brown);
   margin: 15% auto;
   padding: 20px;
-  border: 1px solid var(--pale-brown);
+  border: 1px solid var(--brown);
   width: 80%;
   max-width: 600px;
   border-radius: 8px;
@@ -37,6 +37,9 @@
   text-align: center;
   margin-bottom: 20px;
   color: var(--text-color);
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  font-style: normal;
 }
 .form-group {
   margin-bottom: 15px;
@@ -46,6 +49,9 @@
   margin-bottom: 5px;
   font-weight: bold;
   color: var(--text-color);
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  font-style: normal;
 }
 .form-group input {
   width: 100%;
@@ -63,18 +69,22 @@
   width: 100%;
   padding: 10px;
   background-color: var(--text-color);
-  color: var(--cream);
+  color: #fdfdfc;
   border: none;
   border-radius: 4px;
   font-size: 16px;
   cursor: pointer;
 }
 .submit-btn:hover {
-  background-color: var(--brown);
+  background-color: var(--pink);
+  color: var(--text-color);
 }
 .submit-btn:disabled {
   background-color: var(--brown);
   cursor: not-allowed;
+}
+#openModalBtn {
+  max-width: 260px;
 }
 </style>
 </head>
@@ -82,7 +92,7 @@
   <nav class="navbar">
     <div class="nav-container">
       <a href="./index.html" class="logo-link">
-        <img src="./imgs/logo.png" />
+        <img src="./imgs/logo.jpg" />
         <div>Refined Beauty</div>
         <div>By Agnes</div>
       </a>
@@ -90,10 +100,10 @@
         <div>
         <a href="#services" class="nav-link">Services</a>
         <a href="#about" class="nav-link">About</a>
-        <a href="portfolio.html" class="nav-link">Portfolio</a>
+        <a href="portfolio.html" class="nav-link">Gallery</a>
         <a href="#contact" class="nav-link">Contact</a>
         </div>
-        <a href="" class="cta-button">BOOK APPOINTMENT</a>
+        <a href="" class="cta-button">REQUEST A QUOTE</a>
       </div>
       <div class="hamburger" onclick="toggleMenu()">
         <div class="bar bar1"></div>
@@ -118,14 +128,110 @@
     <div>
       <div>
         <h2>We take care of your look so you can concentrate on the wedding.</h2>
-        <p>At <b>Beauty By Agnes</b>, we understand that your wedding day is one of the most important days of your life. That's why we are here to take care of your look, so you can focus on enjoying every moment of your special day.</p>
-        <p>Our team of <b>talented hairstylists and makeup artists</b> will work closely with you to create a stunning and personalized look that enhances your natural beauty.</p>
-        <p>From <b>elegant updos to intricate braids</b>, we have the expertise and creativity to bring your dream wedding day look to life.</p>
-        <p>Trust us to make you <b>look and feel absolutely beautiful</b> on your big day. Contact us today to book your bridal beauty consultation.</p>    
+        <p>At <b>Refined Beauty by Agnes Bridal</b>, we believe that every bride deserves to feel truly exquisite on her wedding day.</p>
+        <p>Your dream, uniquely yours. Experience the luxury of personalized elegance and let us craft a gown that's as singular as your love story. With personalized service and attention to every detail, we ensure that every bride's journey to finding her dream looks.</p> 
       </div>
       <img src="./imgs/34ae30e5-6ff1-4305-9cdd-52d83210186f.jpg" />
     </div>
   </section>
+
+  <section class="process">
+    <div>
+
+      <div class="gallery">
+        <div class="gallery-item">
+            <img src="./imgs/gallery/_Y9A7277_websize.jpg" alt="Wedding Salon Photo 1">
+            <div class="caption">Bridal Process</div>
+        </div>
+        <div class="gallery-item reverse">
+            <img src="./imgs/gallery/_Y9A7391_websize.jpg" alt="Wedding Salon Photo 2">
+            <div class="caption">Bridal Shower</div>
+        </div>
+        <div class="gallery-item">
+            <img src="./imgs/gallery/_Y9A8183_websize.jpg" alt="Wedding Salon Photo 3">
+            <div class="caption">A celebration for the bride-to-be with her close friends and family.</div>
+        </div>
+        <div class="gallery-item reverse">
+            <img src="./imgs/gallery/_Y9A8766_websize.jpg" alt="Wedding Salon Photo 4">
+            <div class="caption">Wedding Ceremony</div>
+        </div>
+        <div class="gallery-item">
+            <img src="./imgs/gallery/_Y9A8972_websize.jpg" alt="Wedding Salon Photo 5">
+            <div class="caption">The bride and groom walk joyfully with their bridal party in front of a beautifully adorned church, ready to celebrate their special day.</div>
+        </div>
+        <div class="gallery-item reverse">
+            <img src="./imgs/gallery/_Y9A9198_websize.jpg" alt="Wedding Salon Photo 6">
+            <div class="caption">The groom lovingly kisses the bride's hand as she sits in a classic car, capturing a timeless and romantic moment of their wedding day.</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div>
+      <img src="./imgs/agnes.jpeg" />
+      <div>
+        <h2>Hello Gorgeous!</h2>
+        <p>I'm SO excited to talk to you about your big day! Here you'll find answers to your most frequently asked questions: from booking details, trials, and more.</p>
+        <p>I've made sure to include all the information you need so you can relax knowing you are investing both in how you look as well as your peace of mind. My booking process is designed to be as simple as possible so all you have to worry about is walking down the aisle feeling like a million bucks. I'll take care of everything else.</p>
+        <p>Whether you're going for a romantic look, a glamorous look, something classic or natural, not only should your artist be able to make you look beautiful, they should also be patient, responsive, and respectful of your time. I'm honored to be among those you are considering and promise to be all those things for you and more.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <div>
+
+      <div>
+        <h2>Testimonials</h2>
+        <blockquote>
+          <p>"There is no one else I would trust with your hair on your special day other than Agnes. I searched forever to find the perfect stylist, one that understood what I wanted and how to work with my hair. My hair doesn't hold curls well but Anges was not only able to curl my hair but get the curls to last all night long!! She used these techniques I've never seen anybody do before and it worked perfectly!! She made the environment feel peaceful while she did my hair, which all us brides know is not easy to do on our wedding days. So if you're looking for a hair stylist for your wedding or for any big/special occasion, choose Anges! Thank you for making me feel soo beautiful on my wedding day xoxo"</p>
+          <cite>- Tamra</cite>
+        </blockquote>
+        <img src="./imgs/c38396e4-bc54-42f1-9fc6-6d77e21066f0.jpg" >
+      </div>
+      
+      <div>
+        <blockquote>
+          <p>"Agnes! Oh my gosh! What can I say negative? Absolutely nothing!!! My soul resonated with her and I knew she was the one!! I had 3 make up trials before finding my match for my wedding but when it came to my hair I knew from day one Agnes was the right one!! Not only is she sweet and hard working, she's very passionate and proud of her work! She takes her time and listens to what you want and need!! She doesn't rush you and just say yeah I know what you want. Agnes listens and executes!! I hired her for my Hindu wedding and white dress wedding and she absolutely delivered on both days!! She was prompt and made me the most beautiful bride! She's not only my hair stylist now but a good friend! Absolutely love her and her work!"</p>
+          <cite>- Nessa</cite>
+        </blockquote>  
+        <img src="./imgs/d7395991-479a-48d8-9afa-554e5e280775.jpg" >
+      </div>
+
+    </div>
+ </section>
+<!--
+  <section class="brown">
+    <div>
+      <img src="./imgs/logo.png"/>
+    </div>
+  </section>
+
+  <section class="pink">
+    <div>
+      <img src="./imgs/logo.png" />
+    </div>
+  </section>
+-->
+  <section class="contact-us" id="contact">
+    <div>
+
+      <button id="openModalBtn" class="submit-btn">Bridal Booking Contact Form</button>
+
+      <h2>For studio booking please visit us on <a href="https://www.instagram.com/agnes_does_hair/" >Instagram</a></h2>
+
+      <a href="https://www.instagram.com/agnes_does_hair/" >
+        <img src="./imgs/ig.svg" height="100px" width="100px">
+      </a>
+
+      <a href="https://www.instagram.com/agnes_does_hair/">@agnes_does_hair - Studio Booking</a>
+
+      <a href="https://www.instagram.com/refinedbeauty_by_agnes/">@refinedbeauty_by_agnes - Bridal Booking</a>
+
+    </div>
+ </section>
 
   <section class="slider">
     <div>
@@ -155,82 +261,14 @@
     </div>
   </section>
 
-  <section class="about" id="about">
-    <div>
-      <img src="./imgs/agnes.jpeg" />
-      <div>
-        <h2>Hello Gorgeous!</h2>
-        <p>I'm SO excited to talk to you about your big day! Here you'll find answers to your most frequently asked questions: from booking details, trials, and more.</p>
-        <p>I've made sure to include all the information you need so you can relax knowing you are investing both in how you look as well as your peace of mind. My booking process is designed to be as simple as possible so all you have to worry about is walking down the aisle feeling like a million bucks. I'll take care of everything else.</p>
-        <p>Whether you're going for a romantic look, a glamorous look, something classic or natural, not only should your artist be able to make you look beautiful, they should also be patient, responsive, and respectful of your time. I'm honored to be among those you are considering and promise to be all those things for you and more.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="testimonials">
-    <div>
-      <h2>Testimonials</h2>
-      <blockquote>
-        <p>"There is no one else I would trust with your hair on your special day other than Agnes. I searched forever to find the perfect stylist, one that understood what I wanted and how to work with my hair. My hair doesn't hold curls well but Anges was not only able to curl my hair but get the curls to last all night long!! She used these techniques I've never seen anybody do before and it worked perfectly!! She made the environment feel peaceful while she did my hair, which all us brides know is not easy to do on our wedding days. So if you're looking for a hair stylist for your wedding or for any big/special occasion, choose Anges! Thank you for making me feel soo beautiful on my wedding day xoxo"</p>
-        <cite>- Tamra</cite>
-      </blockquote>
-      
-      <blockquote>
-        <p>"Agnes! Oh my gosh! What can I say negative? Absolutely nothing!!! My soul resonated with her and I knew she was the one!! I had 3 make up trials before finding my match for my wedding but when it came to my hair I knew from day one Agnes was the right one!! Not only is she sweet and hard working, she's very passionate and proud of her work! She takes her time and listens to what you want and need!! She doesn't rush you and just say yeah I know what you want. Agnes listens and executes!! I hired her for my Hindu wedding and white dress wedding and she absolutely delivered on both days!! She was prompt and made me the most beautiful bride! She's not only my hair stylist now but a good friend! Absolutely love her and her work!"</p>
-        <cite>- Nessa</cite>
-      </blockquote>
-    </div>
- </section>
-<!--
-  <section class="brown">
-    <div>
-      <img src="./imgs/logo.png"/>
-    </div>
-  </section>
-
-  <section class="pink">
-    <div>
-      <img src="./imgs/logo.png" />
-    </div>
-  </section>
--->
-  <section class="contact-us" id="contact">
-    <div>
-
-      <button id="openModalBtn" class="submit-btn">Contact Us</button>
-
-      <h2>Follow us on Instagram</h2>
-      <a href="https://www.instagram.com/agnes_does_hair/" >agnes_does_hair - Studio Booking</a>
-      <div class="ig-container">
-        <a class="ig-item" href="https://www.instagram.com/agnes_does_hair/reel/C64cqu8AzZM/" target="_blank">
-          <img src="./imgs/ig/443227832_1794669051042328_8147046862828313019_n.jpg" />
-        </a>
-        <a class="ig-item" href="https://www.instagram.com/agnes_does_hair/p/C6bRa_aAovj/" target="_blank">
-          <img src="./imgs/ig/441116419_2728589607305411_165054704233249465_n.jpg" />
-        </a>
-        <a class="ig-item" href="https://www.instagram.com/agnes_does_hair/p/C6U0E_EtHkW/" target="_blank">
-          <img src="./imgs/ig/440954307_842202344396848_8898451198082154466_n.jpg" />
-        </a>
-        <a class="ig-item" href="https://www.instagram.com/agnes_does_hair/p/C4HD7IiNqP4/" target="_blank">
-          <img src="./imgs/ig/431705129_367950522803651_4163152518834549763_n.jpg" />
-        </a>
-        <a class="ig-item" href="https://www.instagram.com/agnes_does_hair/p/C3kvRkaA33b/" target="_blank">
-          <img src="./imgs/ig/428592828_753070750122359_6082379468269951058_n.jpg" />
-        </a>
-        <a class="ig-item hidden" href="https://www.instagram.com/agnes_does_hair/p/C61KuzjgP4g/">
-          <img src="./imgs/ig/443228051_981148913614321_2714851216660514015_n.jpg" />
-        </a>
-      </div>
-
-      <a href="https://www.instagram.com/refinedbeauty_by_agnes/">refinedbeauty_by_agnes - Bridal Booking</a>
-
-    </div>
- </section>
-
   <footer>
+  
+    <div id="map"></div>
+
     <p>
       <a href="mailto:refinedbeauty.agnes@gmail.com">refinedbeauty.agnes@gmail.com</a>
     </p>
+  
     <p>&copy; 2024 Refined Beauty by Agnes. All rights reserved.</p>
   </footer>
 
@@ -285,6 +323,74 @@
   </div>
 
 <script src="./js/agnes.js"></script>
+<script>
+    function initMap() {
+        // Map options
+        const mapOptions = {
+            zoom: 15,
+            center: { lat: 26.6834, lng: -80.2206 }, // Coordinates for 11041 Southern Blvd Suite 120, Royal Palm Beach, FL 33411
+            styles: [
+                {
+                    "featureType": "all",
+                    "elementType": "geometry.fill",
+                    "stylers": [
+                        { "color": "#fdfdfc" }
+                    ]
+                },
+                {
+                    "featureType": "all",
+                    "elementType": "geometry.stroke",
+                    "stylers": [
+                        { "color": "#f3ecdc" }
+                    ]
+                },
+                {
+                    "featureType": "all",
+                    "elementType": "labels.text.fill",
+                    "stylers": [
+                        { "color": "#ccbebb" }
+                    ]
+                },
+                {
+                    "featureType": "all",
+                    "elementType": "labels.text.stroke",
+                    "stylers": [
+                        { "color": "#f1e5e3" }
+                    ]
+                },
+                {
+                    "featureType": "poi",
+                    "elementType": "labels.icon",
+                    "stylers": [
+                        { "visibility": "off" }
+                    ]
+                },
+                {
+                    "featureType": "transit",
+                    "elementType": "labels.icon",
+                    "stylers": [
+                        { "visibility": "off" }
+                    ]
+                }
+            ],
+            disableDefaultUI: true
+        };
+
+        // Creating the map
+        const map = new google.maps.Map(document.getElementById('map'), mapOptions);
+
+        // Adding a marker at the salon location
+        const marker = new google.maps.Marker({
+            position: { lat: 26.6834, lng: -80.2206 },
+            map: map,
+            title: 'The Hair Bar Salon'
+        });
+    }
+</script>
+<script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCF3FHw9ekBzKGLGR2Byh8PCej2JEFByww&callback=initMap">
+</script>
+
 <script>
   document.getElementById('openModalBtn').addEventListener('click', function() {
       document.getElementById('contactModal').style.display = 'block';
